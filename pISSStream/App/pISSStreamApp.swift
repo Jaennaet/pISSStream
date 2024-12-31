@@ -1,14 +1,14 @@
-import SwiftUI
 import BackgroundTasks
 import LightstreamerClient
 import os
+import SwiftUI
 
 @main
 struct pISSStreamApp: App {
     #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    #endif
     @StateObject private var appState = AppStateViewModel()
+    #endif
 
     var body: some Scene {
         #if os(macOS)
@@ -18,9 +18,9 @@ struct pISSStreamApp: App {
                 Text(appState.getStatusText())
                     .foregroundColor(appState.getStatusColor())
                     .font(.caption)
-                
+
                 Divider()
-                
+
                 Button("Quit") {
                     NSApplication.shared.terminate(nil)
                 }
@@ -32,22 +32,12 @@ struct pISSStreamApp: App {
             )
         }
         #elseif os(visionOS)
-        // visionOS Interface
-        WindowGroup {
-            ContentView()
-                .environmentObject(appState)
-        }
-        .windowStyle(.plain)
-        .defaultSize(width: 400, height: 300)
-        
-        ImmersiveSpace(id: "ISSSpace") {
-            // Optional: Add immersive content here
-        }
+        pISSSceneConfiguration()
         #else
         // iOS Interface
         WindowGroup {
             ContentView()
-                .environmentObject(appState)
+                .environmentObject(AppStateViewModel())
         }
         #endif
     }

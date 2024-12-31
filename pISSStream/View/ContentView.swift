@@ -1,10 +1,46 @@
+//
+//  ContentView.swift
+//  pISSStream
+//
+//  Created by durul dalkanat on 12/25/24.
+//
+
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var appState: AppStateViewModel
     
+    #if os(visionOS)
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
+    @State private var isImmersive = false
+    #endif
+    
     var body: some View {
         VStack(spacing: 20) {
+            #if os(visionOS)
+            // 3D View Toggle Button at the top
+            Button(action: {
+                Task {
+                    if isImmersive {
+                        await dismissImmersiveSpace()
+                        isImmersive = false
+                    } else {
+                        await openImmersiveSpace(id: "ISSSpace")
+                        isImmersive = true
+                    }
+                }
+            }) {
+                Label(
+                    isImmersive ? "Exit 3D View" : "View in 3D",
+                    systemImage: isImmersive ? "arrow.down.right.and.arrow.up.left" : "view.3d"
+                )
+                .font(.headline)
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.top, 20)
+            #endif
+            
             // Status indicator
             HStack {
                 Circle()
@@ -35,18 +71,15 @@ struct ContentView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        #if !os(visionOS)
-        .ignoresSafeArea()
-        #else
-        // visionOS specific modifiers
-        .ornament(
-            visibility: .visible,
-            attachmentAnchor: .scene(.top),
-            contentAlignment: .bottom
-        ) {
-            Text(appState.getStatusText())
-                .padding()
-        }
+        #if os(visionOS)
+            .onAppear {
+                // Automatically open immersive space when view appears
+                Task {
+                    try? await Task.sleep(for: .seconds(1))
+                    await openImmersiveSpace(id: "ISSSpace")
+                    isImmersive = true
+                }
+            }
         #endif
     }
 }
