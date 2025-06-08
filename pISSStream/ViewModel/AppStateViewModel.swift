@@ -53,4 +53,5 @@ class AppStateViewModel: ObservableObject {
             }
         }
     }
+    
 }
