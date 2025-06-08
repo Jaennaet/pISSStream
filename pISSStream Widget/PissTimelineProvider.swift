@@ -80,6 +80,10 @@ struct PissTimelineProvider: AppIntentTimelineProvider {
 //    func relevances() async -> WidgetRelevances<ConfigurationAppIntent> {
 //        // Generate a list containing the contexts this widget is relevant in.
 //    }
+    
+    func recommendations() -> [AppIntentRecommendation<ConfigurationAppIntent>] {
+        return [AppIntentRecommendation(intent: .woman, description: "Astronaut 1"), AppIntentRecommendation(intent: .man, description: "Astronaut 2")]
+    }
 }
 
 

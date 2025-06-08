@@ -15,3 +15,18 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Astronaut Emoji", default: "👩‍🚀")
     var astronaut: String
 }
+
+
+extension ConfigurationAppIntent {
+    static var woman: ConfigurationAppIntent {
+        let intent = ConfigurationAppIntent()
+        intent.astronaut = "👩🏻‍🚀"
+        return intent
+    }
+    
+    static var man: ConfigurationAppIntent {
+        let intent = ConfigurationAppIntent()
+        intent.astronaut = "🧑‍🚀"
+        return intent
+    }
+}

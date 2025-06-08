@@ -40,7 +40,6 @@ struct PissTankView: View {
                 .frame(width: 45, height: 30, alignment: .center)
                 .position(x: tickPosition, y: geometry.size.height - 5.0)
         }
-        
     }
 }
 
@@ -90,6 +89,44 @@ struct PissWidgetView: View {
     
 }
 
+struct PissCircularAccessoryView: View {
+    let entry: PissTimelineProvider.Entry
+    
+    var body: some View {
+        let progress: Double = (Double(entry.pissData.pissValue) ?? 0.0) / 100.0
+        
+        Gauge(value: progress) {
+            Text("\(entry.configuration.astronaut)🚽")
+        } currentValueLabel: {
+            Text("\(Int(progress * 100))%")
+        }
+        .gaugeStyle(.accessoryCircular)
+    }
+}
+
+struct PissRectengularAccessoryView: View {
+    let entry: PissTimelineProvider.Entry
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            VStack(alignment: .leading) {
+                Text("ISS Waste")
+                Text("\(entry.pissData.isConnected ? "CON" : "LOS") - \(entry.date, style: .time)")
+            }
+            .font(.system(size: 11))
+            Spacer()
+            PissCircularAccessoryView(entry: entry)
+        }
+    }
+}
+
+struct PissInlineAccessoryView: View {
+    let entry: PissTimelineProvider.Entry
+
+    var body: some View {
+        Text("ISS Waste: \(entry.pissData.pissValue)%")
+    }
+}
 
 struct pISSStream_WidgetEntryView : View {
     var entry: PissTimelineProvider.Entry
@@ -100,40 +137,44 @@ struct pISSStream_WidgetEntryView : View {
     var body: some View {
         switch(family) {
             case .systemSmall, .systemMedium:
-            PissWidgetView(family: family, entry: entry)
+                PissWidgetView(family: family, entry: entry)
+            case .accessoryCircular:
+                PissCircularAccessoryView(entry: entry)
+            case .accessoryRectangular:
+                PissRectengularAccessoryView(entry: entry)
+            case .accessoryInline:
+                PissInlineAccessoryView(entry: entry)
             default:
-            PissWidgetView(family: family, entry: entry)
+                PissWidgetView(family: family, entry: entry)
         }
     }
 }
 
-struct pISSStream_Widget: Widget {
+public struct pISSStream_Widget: Widget {
     let kind: String = "pISSStream_Widget"
     
-    var body: some WidgetConfiguration {
+    public init() {
+        
+    }
+    
+    public var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: PissTimelineProvider()) { entry in
             pISSStream_WidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .supportedFamilies([.systemSmall, .systemMedium])
+        #if os(watchOS)
+            .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline])
+        #elseif os(macOS)
+            .supportedFamilies([.systemSmall, .systemMedium])
+        #else
+            .supportedFamilies([.accessoryCircular,
+                            .accessoryRectangular, .accessoryInline,
+                            .systemSmall, .systemMedium])
+        #endif
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var woman: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.astronaut = "👩🏻‍🚀"
-        return intent
-    }
-    
-    fileprivate static var man: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.astronaut = "🧑‍🚀"
-        return intent
-    }
-}
-
-
+#if !os(watchOS)
 #Preview("System Small", as: .systemSmall) {
     pISSStream_Widget()
 } timeline: {
@@ -149,3 +190,30 @@ extension ConfigurationAppIntent {
     PissEntry(date: .now + 60, pissData: PissData(isConnected: false, pissValue: "16"), configuration: .woman)
     PissEntry(date: .now + 120, pissData: PissData(isConnected: true, pissValue: "100"), configuration: .woman)
 }
+#endif
+
+#if !os(macOS)
+#Preview("Accessory Circular", as: .accessoryCircular) {
+    pISSStream_Widget()
+} timeline: {
+    PissEntry(date: .now, pissData: PissData(isConnected: false, pissValue: "1"), configuration: .woman)
+    PissEntry(date: .now + 60, pissData: PissData(isConnected: false, pissValue: "16"), configuration: .woman)
+    PissEntry(date: .now + 120, pissData: PissData(isConnected: true, pissValue: "100"), configuration: .woman)
+}
+
+#Preview("Accessory Rectangular", as: .accessoryRectangular) {
+    pISSStream_Widget()
+} timeline: {
+    PissEntry(date: .now, pissData: PissData(isConnected: false, pissValue: "1"), configuration: .woman)
+    PissEntry(date: .now + 60, pissData: PissData(isConnected: false, pissValue: "16"), configuration: .woman)
+    PissEntry(date: .now + 120, pissData: PissData(isConnected: true, pissValue: "100"), configuration: .woman)
+}
+
+#Preview("Accessory Inline", as: .accessoryInline) {
+    pISSStream_Widget()
+} timeline: {
+    PissEntry(date: .now, pissData: PissData(isConnected: false, pissValue: "1"), configuration: .woman)
+    PissEntry(date: .now + 60, pissData: PissData(isConnected: false, pissValue: "16"), configuration: .woman)
+    PissEntry(date: .now + 120, pissData: PissData(isConnected: true, pissValue: "100"), configuration: .woman)
+}
+#endif

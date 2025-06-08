@@ -8,6 +8,7 @@
 import WidgetKit
 
 extension WidgetFamily {
+    #if !os(watchOS)
     func isSmall() -> Bool {
         self == .systemSmall
     }
@@ -19,4 +20,17 @@ extension WidgetFamily {
     func isLarge() -> Bool {
         self == .systemLarge
     }
+    #else
+    func isSmall() -> Bool {
+        false
+    }
+    
+    func isMedium() -> Bool {
+        false
+    }
+    
+    func isLarge() -> Bool {
+        false
+    }
+    #endif
 }
