@@ -104,4 +104,8 @@ extension PissData {
     func getStatusColor() -> Color {
         return isConnected ? .green : .orange
     }
+    
+    func getShortStatusText() -> String {
+        return isConnected ? "CON" : "LOS"
+    }
 }
