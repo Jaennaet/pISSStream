@@ -65,7 +65,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       enableGPUValidationMode = "1"
-      allowLocationSimulation = "YES"
+      allowLocationSimulation = "NO"
       consoleMode = "0"
       structuredConsoleMode = "1">
       <BuildableProductRunnable
