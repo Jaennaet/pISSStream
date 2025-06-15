@@ -92,7 +92,7 @@
 		3326F7062DF46F75007A0791 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
 		3326F7082DF46F75007A0791 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 		338DF87A2DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pISSStreamWatchApp WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		338DF87C2DF70F570074CF15 /* pISSStream Watch WidgetExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pISSStream Watch WidgetExtension.plist"; path = "/Users/i757028/Projects/fun/pISSStream/pISSStream Watch WidgetExtension.plist"; sourceTree = "<absolute>"; };
+		AAF91D3D2DFF1B9900A4113D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pISSStreamWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,7 +261,7 @@
 				3326F70A2DF46F75007A0791 /* pISSStream Widget */,
 				D48D390E2D1301BE006288CB /* Frameworks */,
 				D48D38DD2D12F51C006288CB /* Products */,
-				338DF87C2DF70F570074CF15 /* pISSStream Watch WidgetExtension.plist */,
+				AAF91D3D2DFF1B9900A4113D /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -802,7 +802,7 @@
 				DEVELOPMENT_TEAM = B465UNKBLB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "pISSStream Watch WidgetExtension.plist";
+				INFOPLIST_FILE = "pISSStreamWatchApp Watch App/pISSStream Watch WidgetExtension.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -841,7 +841,7 @@
 				DEVELOPMENT_TEAM = B465UNKBLB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "pISSStream Watch WidgetExtension.plist";
+				INFOPLIST_FILE = "pISSStreamWatchApp Watch App/pISSStream Watch WidgetExtension.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1219,6 +1219,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = B465UNKBLB;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
@@ -1237,6 +1238,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = B465UNKBLB;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;

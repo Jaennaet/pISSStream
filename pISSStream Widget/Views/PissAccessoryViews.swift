@@ -8,6 +8,7 @@
 import SwiftUI
 import WidgetKit
 
+#if !os(macOS)
 struct PissCircularAccessoryView: View {
     let entry: PissTimelineProvider.Entry
     
@@ -74,7 +75,6 @@ struct PissCornerAccessoryView: View {
     }
 }
 
-#if !os(macOS)
 #Preview("Accessory Circular", as: .accessoryCircular) {
     pISSStream_Widget()
 } timeline: {

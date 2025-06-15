@@ -18,6 +18,7 @@ struct pISSStream_WidgetEntryView : View {
         switch(family) {
             case .systemSmall, .systemMedium:
                 PissWidgetView(family: family, entry: entry)
+            #if !os(macOS)
             case .accessoryCircular:
                 PissCircularAccessoryView(entry: entry)
             case .accessoryRectangular:
@@ -26,6 +27,7 @@ struct pISSStream_WidgetEntryView : View {
                 PissInlineAccessoryView(entry: entry)
             case .accessoryCorner:
                 PissCornerAccessoryView(entry: entry)
+            #endif
             default:
                 PissWidgetView(family: family, entry: entry)
         }
