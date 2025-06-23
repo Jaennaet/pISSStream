@@ -14,7 +14,6 @@ struct PissWidgetView: View {
     let entry: PissTimelineProvider.Entry    
     
     var body: some View {
-        
         GeometryReader { geometry in
             VStack(alignment: .leading) {
                 VStack (alignment: .trailing) {
@@ -38,7 +37,6 @@ struct PissWidgetView: View {
                             }
                             .font(.system(size: geometry.minSize * 0.05))
                         }
-                        
                     }
                     if (!family.isSmall()) {
                         Text("Updated @ \(entry.date, style: .time)")
@@ -47,10 +45,8 @@ struct PissWidgetView: View {
                 }
                 PissTankView(pissData: entry.pissData, family: family)
             }
-            
         }
     }
-    
 }
 
 #if !os(watchOS)

@@ -4,7 +4,6 @@
 //
 //  Created by Schuh, Marcell on 6/8/25.
 //
-
 import WidgetKit
 
 extension WidgetFamily {
@@ -15,10 +14,6 @@ extension WidgetFamily {
     
     func isMedium() -> Bool {
         self == .systemMedium
-    }
-    
-    func isLarge() -> Bool {
-        self == .systemLarge
     }
     #else
     func isSmall() -> Bool {

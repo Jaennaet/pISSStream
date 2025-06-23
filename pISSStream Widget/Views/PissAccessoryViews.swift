@@ -24,7 +24,7 @@ struct PissCircularAccessoryView: View {
     }
 }
 
-struct PissRectengularAccessoryView: View {
+struct PissRectangularAccessoryView: View {
     let entry: PissTimelineProvider.Entry
     
     var body: some View {

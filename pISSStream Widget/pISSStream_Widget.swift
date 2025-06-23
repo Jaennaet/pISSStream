@@ -22,7 +22,7 @@ struct pISSStream_WidgetEntryView : View {
             case .accessoryCircular:
                 PissCircularAccessoryView(entry: entry)
             case .accessoryRectangular:
-                PissRectengularAccessoryView(entry: entry)
+                PissRectangularAccessoryView(entry: entry)
             case .accessoryInline:
                 PissInlineAccessoryView(entry: entry)
             case .accessoryCorner:
@@ -44,10 +44,10 @@ public struct pISSStream_Widget: Widget {
     public var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: PissTimelineProvider()) { entry in
             pISSStream_WidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(.background, for: .widget)
         }
         #if os(watchOS)
-        .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline, .accessoryCorner])
+            .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline, .accessoryCorner])
         #elseif os(macOS)
             .supportedFamilies([.systemSmall, .systemMedium])
         #else
