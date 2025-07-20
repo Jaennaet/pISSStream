@@ -30,3 +30,11 @@ struct PissLabel: View {
         #endif
     }
 }
+
+#Preview ("PissLabel Connected", traits: .sizeThatFitsLayout) {
+    PissLabel(amount: "50", isConnected: true)
+}
+
+#Preview ("PissLabel Not Connected", traits: .sizeThatFitsLayout) {
+    PissLabel(amount: "100", isConnected: false)
+}

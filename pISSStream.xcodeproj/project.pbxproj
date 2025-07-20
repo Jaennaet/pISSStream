@@ -7,11 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3326F7072DF46F75007A0791 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3326F7062DF46F75007A0791 /* WidgetKit.framework */; };
+		3326F7092DF46F75007A0791 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3326F7082DF46F75007A0791 /* SwiftUI.framework */; };
+		3326F7172DF46F76007A0791 /* pISSStream WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3326F7052DF46F74007A0791 /* pISSStream WidgetExtension.appex */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		338DF8742DF70F570074CF15 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3326F7082DF46F75007A0791 /* SwiftUI.framework */; };
+		338DF8752DF70F570074CF15 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3326F7062DF46F75007A0791 /* WidgetKit.framework */; };
+		338DF87D2DF70FAA0074CF15 /* pISSStreamWatchApp WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 338DF87A2DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA210A432DDD202B009B4249 /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA210A422DDD202B009B4249 /* LightstreamerClient */; };
 		D48D39102D1301C1006288CB /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = D48D390F2D1301C1006288CB /* LightstreamerClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3326F7152DF46F76007A0791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3326F7042DF46F74007A0791;
+			remoteInfo = "pISSStream WidgetExtension";
+		};
+		338DF87E2DF70FAA0074CF15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338DF8712DF70F570074CF15;
+			remoteInfo = "pISSStreamWatchApp WidgetExtension";
+		};
 		CA210A212DDD1E71009B4249 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
@@ -42,7 +62,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3326F71C2DF46F76007A0791 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3326F7172DF46F76007A0791 /* pISSStream WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DF8802DF70FAA0074CF15 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				338DF87D2DF70FAA0074CF15 /* pISSStreamWatchApp WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3326F7052DF46F74007A0791 /* pISSStream WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pISSStream WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3326F7062DF46F75007A0791 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
+		3326F7082DF46F75007A0791 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
+		338DF87A2DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pISSStreamWatchApp WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF91D3D2DFF1B9900A4113D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pISSStreamWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +102,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3326F71B2DF46F76007A0791 /* Exceptions for "pISSStream Widget" folder in "pISSStream WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3326F7042DF46F74007A0791 /* pISSStream WidgetExtension */;
+		};
+		338DF87B2DF70F570074CF15 /* Exceptions for "pISSStream Widget" folder in "pISSStreamWatchApp WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 338DF8712DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension */;
+		};
 		CA210A402DDD1EA5009B4249 /* Exceptions for "pISSStream" folder in "pISSStreamWatchApp Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -74,6 +138,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		3326F70A2DF46F75007A0791 /* pISSStream Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3326F71B2DF46F76007A0791 /* Exceptions for "pISSStream Widget" folder in "pISSStream WidgetExtension" target */,
+				338DF87B2DF70F570074CF15 /* Exceptions for "pISSStream Widget" folder in "pISSStreamWatchApp WidgetExtension" target */,
+			);
+			path = "pISSStream Widget";
+			sourceTree = "<group>";
+		};
 		CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "pISSStreamWatchApp Watch App";
@@ -111,6 +184,24 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3326F7022DF46F74007A0791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3326F7092DF46F75007A0791 /* SwiftUI.framework in Frameworks */,
+				3326F7072DF46F75007A0791 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DF8732DF70F570074CF15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DF8742DF70F570074CF15 /* SwiftUI.framework in Frameworks */,
+				338DF8752DF70F570074CF15 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A112DDD1E70009B4249 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,8 +258,10 @@
 				CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
 				CA210A232DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
 				CA210A2D2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
+				3326F70A2DF46F75007A0791 /* pISSStream Widget */,
 				D48D390E2D1301BE006288CB /* Frameworks */,
 				D48D38DD2D12F51C006288CB /* Products */,
+				AAF91D3D2DFF1B9900A4113D /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +274,8 @@
 				CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */,
 				CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */,
 				CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */,
+				3326F7052DF46F74007A0791 /* pISSStream WidgetExtension.appex */,
+				338DF87A2DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +283,8 @@
 		D48D390E2D1301BE006288CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3326F7062DF46F75007A0791 /* WidgetKit.framework */,
+				3326F7082DF46F75007A0791 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +292,50 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3326F7042DF46F74007A0791 /* pISSStream WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3326F7182DF46F76007A0791 /* Build configuration list for PBXNativeTarget "pISSStream WidgetExtension" */;
+			buildPhases = (
+				3326F7012DF46F74007A0791 /* Sources */,
+				3326F7022DF46F74007A0791 /* Frameworks */,
+				3326F7032DF46F74007A0791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3326F70A2DF46F75007A0791 /* pISSStream Widget */,
+			);
+			name = "pISSStream WidgetExtension";
+			packageProductDependencies = (
+			);
+			productName = "pISSStream WidgetExtension";
+			productReference = 3326F7052DF46F74007A0791 /* pISSStream WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		338DF8712DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338DF8772DF70F570074CF15 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp WidgetExtension" */;
+			buildPhases = (
+				338DF8722DF70F570074CF15 /* Sources */,
+				338DF8732DF70F570074CF15 /* Frameworks */,
+				338DF8762DF70F570074CF15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3326F70A2DF46F75007A0791 /* pISSStream Widget */,
+			);
+			name = "pISSStreamWatchApp WidgetExtension";
+			packageProductDependencies = (
+			);
+			productName = "pISSStream WidgetExtension";
+			productReference = 338DF87A2DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */;
@@ -202,10 +343,12 @@
 				CA210A102DDD1E70009B4249 /* Sources */,
 				CA210A112DDD1E70009B4249 /* Frameworks */,
 				CA210A122DDD1E70009B4249 /* Resources */,
+				338DF8802DF70FAA0074CF15 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				338DF87F2DF70FAA0074CF15 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
@@ -271,11 +414,13 @@
 				D48D38D82D12F51C006288CB /* Sources */,
 				D48D38D92D12F51C006288CB /* Frameworks */,
 				D48D38DA2D12F51C006288CB /* Resources */,
+				3326F71C2DF46F76007A0791 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D48D390D2D12FAD5006288CB /* PBXTargetDependency */,
+				3326F7162DF46F76007A0791 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D48D38DE2D12F51C006288CB /* pISSStream */,
@@ -341,9 +486,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1620;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					3326F7042DF46F74007A0791 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					CA210A132DDD1E70009B4249 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -386,9 +534,11 @@
 			projectRoot = "";
 			targets = (
 				D48D38DB2D12F51C006288CB /* pISSStream */,
+				3326F7042DF46F74007A0791 /* pISSStream WidgetExtension */,
 				D48D38EC2D12F51D006288CB /* pISSStreamTests */,
 				D48D38F62D12F51D006288CB /* pISSStreamUITests */,
 				CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
+				338DF8712DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension */,
 				CA210A1F2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
 				CA210A292DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
 			);
@@ -396,6 +546,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3326F7032DF46F74007A0791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DF8762DF70F570074CF15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A122DDD1E70009B4249 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +605,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3326F7012DF46F74007A0791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DF8722DF70F570074CF15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A102DDD1E70009B4249 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,6 +664,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3326F7162DF46F76007A0791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				macos,
+			);
+			target = 3326F7042DF46F74007A0791 /* pISSStream WidgetExtension */;
+			targetProxy = 3326F7152DF46F76007A0791 /* PBXContainerItemProxy */;
+		};
+		338DF87F2DF70FAA0074CF15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338DF8712DF70F570074CF15 /* pISSStreamWatchApp WidgetExtension */;
+			targetProxy = 338DF87E2DF70FAA0074CF15 /* PBXContainerItemProxy */;
+		};
 		CA210A222DDD1E71009B4249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */;
@@ -513,6 +705,172 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3326F7192DF46F76007A0791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pISSStream Widget/pISSStream_Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pISSStream Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "social.bsky.jaennaet.pISSStream.pISSStream-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Debug;
+		};
+		3326F71A2DF46F76007A0791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pISSStream Widget/pISSStream_Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pISSStream Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "social.bsky.jaennaet.pISSStream.pISSStream-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		338DF8782DF70F570074CF15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pISSStream Widget/pISSStream_Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pISSStreamWatchApp Watch App/pISSStream Watch WidgetExtension.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "social.bsky.jaennaet.pISSStream.watchkitapp.pISSStream-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		338DF8792DF70F570074CF15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pISSStream Widget/pISSStream_Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pISSStreamWatchApp Watch App/pISSStream Watch WidgetExtension.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pISSStream Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "social.bsky.jaennaet.pISSStream.watchkitapp.pISSStream-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
 		CA210A362DDD1E71009B4249 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,11 +885,12 @@
 				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWatchApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = social.bsky.jaennaet.pISSStream;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -540,7 +899,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -558,11 +917,12 @@
 				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWatchApp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = social.bsky.jaennaet.pISSStream;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -572,7 +932,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -582,7 +942,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppTests";
@@ -592,7 +952,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStreamWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStreamWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -602,7 +962,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppTests";
@@ -613,7 +973,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStreamWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStreamWatchApp Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -622,7 +982,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppUITests";
@@ -632,7 +992,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "pISSStreamWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -641,7 +1001,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppUITests";
@@ -652,7 +1012,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "pISSStreamWatchApp Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -690,6 +1050,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -753,6 +1114,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -784,9 +1146,10 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FUSE_BUILD_SCRIPT_PHASES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -823,9 +1186,10 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				FUSE_BUILD_SCRIPT_PHASES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -856,13 +1220,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStream";
@@ -873,13 +1242,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStream";
@@ -891,6 +1265,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamUITests;
@@ -906,6 +1281,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamUITests;
@@ -919,6 +1295,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3326F7182DF46F76007A0791 /* Build configuration list for PBXNativeTarget "pISSStream WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3326F7192DF46F76007A0791 /* Debug */,
+				3326F71A2DF46F76007A0791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338DF8772DF70F570074CF15 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338DF8782DF70F570074CF15 /* Debug */,
+				338DF8792DF70F570074CF15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
