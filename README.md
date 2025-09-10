@@ -22,7 +22,7 @@ pISSStream is a menu bar app that shows the International Space Station's urine 
 
 ![](https://panthercap.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Acl3kuq4sxg3jpfjtom4gnamx&cid=bafkreidthbrhc7pjez4g445dpontwyefusimny45kja57twy2obshwtsn4)
 
-[Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.0.2.dmg) the latest release DMG.
+[Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.3/pISSStream.dmg) the latest release DMG.
 
 
 ### iOS, watchOS & visionOS
